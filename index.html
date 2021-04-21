@@ -22,7 +22,7 @@
     <meta name=twitter:title content="Stuff">
     <meta name=twitter:text:description content="Stuff">
     <meta name=twitter:image content="">
-    <link rel=icon type=image/png sizes=32x32 href="img/favicon.png">
+    <link rel=icon type=image/png sizes=32x32 href="img/favIcon.png">
     <!--Google fonts goes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -31,17 +31,18 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/mmenu.min.css">
     <!--Custom css starts-->
     <link rel="stylesheet" href="css/main.css">
     <script src="js/modernizr.js"></script>
 </head>
 
 <body>
-
+<div id="page">
 <main>
 
 <!--navbar area starts-->
-<div class="custom--navbar">
+<div class="custom--navbar sticky">
     <div class="custom-social-navbar">
       <nav class="navbar navbar-expand-md">
           <div class="container">
@@ -64,11 +65,13 @@
                     </li>
                 </ul>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler menutext-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon">
-                <svg id="icon-menu" viewBox="0 0 20 20">
+                <!-- <svg id="icon-menu" viewBox="0 0 20 20">
                     <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
-                </svg>
+                </svg> -->
+                <span class="navbar-toggler-icon-open">Menu</span>
+                <span class="navbar-toggler-icon-close">Close</span>
               </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -107,32 +110,187 @@
           </div>
       </nav>
     </div>
-    <div class="col-12 px-0">
-        <div class="container">
-            <div class="logo-status-area">
-                <div class="row align-items-center">
-                    <div class="col-6 text-left text-md-right">
-                        <a href="#" class="brand-logo">
-                            <img src="./img/Logo.png" alt="syncit-logo">
-                        </a>
+    <div class="shadow-navbar">
+        <div class="col-12 mt-xs60 px-0">
+            <div class="container">
+                <div class="logo-status-area">
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left text-md-right">
+                            <a href="#" class="brand-logo">
+                                <img src="./img/Logo.png" alt="syncit-logo">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <div class="user-info-icon">
+                                <a href="#">
+                                    <img src="./img/user-logo.svg" alt="syncit-user">
+                                </a>
+                                <a href="#">
+                                    <img src="./img/shopping-logo.svg" alt="syncit-shopping">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <div class="user-info-icon">
-                            <a href="#">
-                                <img src="./img/user-logo.svg" alt="syncit-user">
-                            </a>
-                            <a href="#">
-                                <img src="./img/shopping-logo.svg" alt="syncit-shopping">
-                            </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-0">
+            <div class="category-widget">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-2 pr-0 pr-md-3 col-md-6">
+                            <div class="mmenu-botstrap-outer">
+                                <nav class="navbar navbar-expand-md">
+                                    <button class="navbar-toggler overlaytoggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContentMenu" aria-controls="navbarSupportedContentMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                      <span class="navbar-toggler-icon">
+                                        <svg id="icon-menuTwo" viewBox="0 0 20 20">
+                                            <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+                                        </svg>
+                                      </span>
+                                    </button>
+                                    <div class="navbarslider collapse navbar-collapse" id="navbarSupportedContentMenu">
+                                      <ul class="navbar-nav mr-auto">
+                                        <li class="allcategorymenu-heading d-md-none">
+                                            <button class="navbar-toggler overlaytoggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContentMenu" aria-controls="navbarSupportedContentMenu" aria-expanded="false" aria-label="Toggle navigation"><svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg"><path d="M17.556 7.847H1M7.45 1L1 7.877l6.45 6.817" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg></button>
+                                            <div>All Categories</div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Category1
+                                              <i class="fas fa-angle-down ml-1"></i>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                                              <a class="dropdown-item" href="#">Action</a>
+                                              <a class="dropdown-item" href="#">Another action</a>
+                                              <a class="dropdown-item" href="#">Action</a>
+                                              <a class="dropdown-item" href="#">Another action</a>
+                                              <a class="dropdown-item" href="#">Action</a>
+                                              <a class="dropdown-item" href="#">Another action</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdownOne" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Category2
+                                              <i class="fas fa-angle-down ml-1"></i>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="categoryDropdownOne">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="categoryDropdownTwo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Category3
+                                            <i class="fas fa-angle-down ml-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="categoryDropdownTwo">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="overlay"></div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-10 pl-0 pl-md-3 col-md-6 text-right">
+                            <form class="search-form d-none d-md-block" role="search">
+                                <div class="searchbar--icon" id="search">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <button type="submit" class="form-control form-control-submit">Submit</button>
+                                    <span class="search-label"><i><img src="./img/search-icon.svg" alt="searchicon"></i></span>
+                                </div>
+                            </form>
+                            <div class="d-md-none">
+                                <div class="sticky-searchbar">
+                                    <div class="position-relative">
+                                        <input type="text" class="search-stickybox" placeholder="Search for products brands & more" />
+                                        <button type="submit" role="button" class="stickybox--search--btn"><img src="./img/search-icon.svg" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 <!--navbar area ends-->
+
+<!--header section starts-->
+<section class="mt-md-2">
+    <header>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="height-box">
+                    <video nocontrols loop autoplay muted>
+                        <source src="./img/A Couple Prepares for a Photo Session.mp4" type="video/mp4">
+                    </video>
+                    <div class="banner-header-slider-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="maxw-450">
+                                        <h1>Summer Mood</h1>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                        <a href="#" class="readmore--btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="height-box">
+                    <img src="./img/header-slider-banner.png" alt="syncit-bannerimage">
+                    <div class="banner-header-slider-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="maxw-450">
+                                        <h1>Summer Mood</h1>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                        <a href="#" class="readmore--btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="height-box">
+                    <img src="./img/header-slider-banner.png" alt="syncit-bannerimage">
+                    <div class="banner-header-slider-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="maxw-450">
+                                        <h1>Summer Mood</h1>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                        <a href="#" class="readmore--btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </header>
+</section>
+<!--header section ends-->
 
 
 <!--new products starts-->
@@ -372,18 +530,433 @@
 <!--shop now categorybox ends-->
 
 
+<!--home decor starts-->
+<section class="section-padding row-gap-section">
+    <div class="translating-boxes bg-f9d">
+        <div class="decor-img-box bg-cover" style="background-image: url('./img/hover-image-tarnslate.png');">
+            <div class="decor-img-box-content">
+                <div>
+                    <h4>Best Home Decorating Ideas</h4>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--home decor starts-->
+
+
+<!--Blog card starts-->
+<section class="section-padding row-gap-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h4 class="blog--title">Blog</h4>
+            </div>
+            <div class="col-md-6 mb-4 pr-md-4 mb-md-0">
+                <div class="blog--card">
+                    <div class="blog-card--inner">
+                        <img src="./img/blog-card1 (1).png" alt="syncit-blog">
+                        <div class="blog-card-inner-info">
+                            <h6>HEALTHY FOOD</h6>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised hidden in the middle of text.
+                            </p>
+                            <a href="#" class="readmore--btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-md-4">
+                <div class="blog--card">
+                    <div class="blog-card--inner">
+                        <img src="./img/blog-card1 (2).png" alt="syncit-blog">
+                        <div class="blog-card-inner-info">
+                            <h6>SPRING LOOK</h6>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised hidden in the middle of text.
+                            </p>
+                            <a href="#" class="readmore--btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Blog card ends-->
+
+
+<!--Products filter starts-->
+<section class="section-padding row-gap-section">
+    <div class="container">
+        <div class="new-bar">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <h4 class="heading-four-text">Products</h4>
+                </div>
+                <div class="col-4 text-right">
+                    <a href="#" class="seeall--text">See all</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="syncit-products-menu">
+                    <div class="max-w700 mx-auto">
+                        <ul>
+                            <li class="active" data-filter=".featured"><span>FEATURED</span></li>
+                            <li data-filter=".istotop-cloths"><span>CLOTHES</span></li>
+                            <li data-filter=".isotop-cosmetic"><span>COSMETICS</span></li>
+                            <li data-filter=".isotop-home"><span>HOME</span></li>
+                          </ul>
+                    </div>
+                </div>
+                <div class="syncit-products-item">
+                    <div class="row syncit-products-item-row">
+                        <div class="col-xl-3 col-sm-6 featured">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-5.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Fashion Blouse</h6>
+                                    <p>$99.99</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured istotop-cloths">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-7.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Business Suit</h6>
+                                    <p>$1140.00</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured isotop-cosmetic">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-9.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>White Blouse</h6>
+                                    <p>$55.00</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured istotop-cloths">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-11.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Night Dress</h6>
+                                    <p>$750.00</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured isotop-cosmetic">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-4.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Modern Necklace </h6>
+                                    <p>$139.99</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-8.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>V Dress</h6>
+                                    <p>$359.99</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured isotop-home">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-10.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Pink Dress </h6>
+                                    <p>$255.00</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 featured isotop-home">
+                            <div class="syncit-products-item-cards">
+                                <div class="syncit-products-item-cards__image">
+                                    <img src="./img/Rectangle 6-12.png" alt="productImage">
+                                </div>
+                                <div class="syncit-products-item-cards__content">
+                                    <h6>Summer Jacket</h6>
+                                    <p>$550.00</p>
+                                    <button role="button" type="button">
+                                       <span class="addcart">Add To Cart</span>
+                                       <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+<!--Products filter ends-->
+
+
+<!--Blog card starts-->
+<section class="section-padding row-gap-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h4 class="blog--title">Shop the Look</h4>
+            </div>
+            <div class="col-12">
+                <div class="shop-thelook">
+                    <div class="allimg-points">
+                        <img src="./img/lookup-bg.png" alt="syncit-shoplook">
+                        <div class="image-point dropdown" style="bottom: 19%;left: 61%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Decorate Blanket</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="bottom: 19%;left: 41%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonTable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonTable">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Flexible Table</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="bottom: 21%;left: 12%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonChair" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonChair">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Flexible Chair</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="top: 40%;left: 18.5%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonLamp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonLamp">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Flexible Lamp</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="top: 23%;left: 53%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonWpaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonWpaper">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Wall Paper</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="top: 30%;right: 5%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonHlamp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonHlamp">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Long Lamp</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="image-point dropdown" style="top: 42%;right: 24%;">
+                            <button class="dropdown-toggle point" type="button" id="dropdownMenuButtonHpaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><span></span></span>
+                            </button>
+                            <div class="point-content dropdown-menu" aria-labelledby="dropdownMenuButtonHpaper">
+                              <!-- <div class="close">
+                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                              </div> -->
+                              <div class="point-image">
+                                <img src="./img/popup-orangbox.png" alt="syncitproduct">
+                              </div>
+                              <div class="point-details">
+                                <p>Artboard</p>
+                                <a href="#" class="view-popbtn">VIEW Product</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Blog card ends-->
+
 
 <!--footer sewction starts-->
 <section class="position-relative">
     <footer class="syncit--footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-8">
+                <div class="col-lg-8">
                     <div class="row">
-
+                        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                            <div>
+                                <a class="footerlogo" href="#"><img src="./img/Logo.png" alt=""> </a>
+                                <div class="mt-4">
+                                    <p class="context-footer"><i class="fas fa-map-marker-alt"></i>598 Madison Ave New York, United States</p>
+                                    <p class="context-footer"><a href="tel:555 - 489 -5588">555 - 489 -5588 </a></p>
+                                    <p class="context-footer"><a href="mailto:stuff@contact.com">stuff@contact.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
+                            <div class="footer-social-links">
+                                <h4>Links 1</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Category1</a></li>
+                                    <li><a href="#">Category2</a></li>
+                                    <li><a href="#">Category3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 pr-lg-0 mb-4 mb-lg-0">
+                            <div class="footer-social-links">
+                                <h4>Links 2</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Store Locator</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 pl-lg-4 mb-4 mb-lg-0">
+                            <div class="footer-social-links">
+                                <h4>Links 2</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">My Wishlist</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Cookie Policy</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-lg-4 mb-4">
                     <p class="footer-subscribetxt">subscribe</p>
                     <p class="footer-subscribetxt-sub">Sign up with your email address to receive news and updates.</p>
                     <div class="email-address-footer">
@@ -421,9 +994,11 @@
 <!--footer sewction ends-->
 
 
-</main>
 
+</main>
+</div>
 <script src="js/jquery.3.5.1.min.js"></script>
+<!-- <script src="js/mmenu.min.js"></script> -->
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
@@ -433,7 +1008,6 @@
   $(".category--shopbox-content-inner a").hover(function () {
     $(this).closest(".category--shopbox-content").toggleClass("max-hover");
   });
-
 
   $('.syncit-products-item-row').isotope({
         itemSelector:'.featured'
@@ -449,18 +1023,6 @@
       })
       return false;
   });
-
-
-//   $('.point-content .close').on('click', function(e) {
-//     $(this).parent().removeClass('active');
-//   });
-
-//   $('.point').on('click', function(e) {
-//     e.stopPropagation();
-//     $(this).toggleClass('active');
-//     $(this).next().toggleClass('active');
-//   });
-
 </script>
 </body>
 </html>
